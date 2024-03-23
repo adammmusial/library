@@ -1,7 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
+    border: 1px solid red;
+}
+
+body,
+html {
     font-family: 'Poppins',sans-serif;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+.container {
+    text-align: center;
+    padding: 16px;
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+.container div {
+    color: white;
+    padding: 15px;
+    border-radius: 15px;    
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 5vh;
+    background-color: grey;
+}
+
+.add-book {
+    border: none;
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1em;
+    background: rgba(0, 0, 0,0.15);
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    transform: 0.3s ease;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    padding: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(10, minmax(150px, 1fr))
+}
+
+.footer {
+    background-color: grey;
+    grid-column: 1/4;
+    padding: 10px;
+}
+
+.header {
+    grid-column: 1/4;
+}
+
+.main {
+    grid-column: 1/4;
+    grid-row: 2/8
+}
+
+.ctn-button {
+    grid-column: 2/3;
+    grid-row: 2/3;
 }
