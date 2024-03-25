@@ -3,12 +3,12 @@ const myLibrary = [];
 function Book(title,author,genre,read) {
   this.title = title;
   this.author = author;
-  this.author = genre
+  this.genre = genre
   this.read = read
 }
 
 function addBookToLibrary(title,author,genre,read) {
-    const newBook = Book(title,author,genre,read) 
+    const newBook = new Book(title,author,genre,read) 
     myLibrary.push(newBook)
 }
 
@@ -19,7 +19,9 @@ function displayBooks(){
     myLibrary.forEach(book => {
         const card = document.createElement('div')
         card.classList.add('card')
-        card.innerHTML = `<h3>${book.title}</h3><p>${book.author}</p><p>${book.genre}</p>`;
+        card.innerHTML = `<h3>${book.title}</h3>
+        <p>${book.author}</p><p>${book.genre}</p>
+        <button id="closeDialog">&times;</button>`;
         bookGrid.appendChild(card);
     })
 }
