@@ -10,22 +10,44 @@
 
 <body>
     <div class="container">
+
         <div class="header">
             <div class="title"> Library</div>
             <div class="login"> Log In</div>
-        </div>
-        <div class="ctn-button">    
-                <button class = "add-book">+ Add book</button>
-        </div>
-        <div class = "books-grid">
-                <div class="cards">
-                </div>
+
         </div>
 
-        <div class= "footer">
+        <main class="main container">
+            <button id="addBookBtn">Add Book</button>
+
+            <dialog id="bookDialog">
+                <div class="dialog-content">
+                    <button id="closeDialog">&times;</button>
+                    <form id="bookForm">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title"><br><br>
+                        <label for="author">Author:</label>
+                        <input type="text" id="author" name="author"><br><br>
+                        <label for="genre">Genre:</label>
+                        <input type="text" id="genre" name="genre"><br><br>
+                        <label for="read">Read:</label>
+                        <input type="text" id="read" name="read"><br><br>
+                        <button type="submit">Save</button>
+                    </form>
+                </div>
+            </dialog>
+        
+            <div id="bookGrid" class="grid">
+
+        </main>
+
+        <footer class="footer">
             Made by Adam Musial
-        </div>
+        </footer>
+
     </div>
+    <script src="index.js"></script>
+
 </body>
 
 </html>
