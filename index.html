@@ -12,14 +12,16 @@
     <div class="container">
 
         <div class="header">
-            <div class="title"> Library</div>
-            <div class="login"> Log In</div>
-
+            <img width="100px" src="./images/logo.svg" alt="Bookshelf Icon">
+            <h1 class="center">My Book Library</h1>            
         </div>
+        
+        <div class="main">
 
-        <main class="main container">
-            <button id="addBookBtn">Add Book</button>
-
+            <div class="button">
+                <button id="addBookBtn">Add Book</button>
+            </div>
+            <div class="card-grid"></div>
             <dialog id="bookDialog">
                 <div class="dialog-content">
                     <button id="closeDialog">&times;</button>
@@ -36,14 +38,11 @@
                     </form>
                 </div>
             </dialog>
-        
-            <div id="bookGrid" class="grid">
+        </div>
 
-        </main>
-
-        <footer class="footer">
-            Made by Adam Musial
-        </footer>
+        <div class="footer">
+            <p>Made by Adam Musial  <a target=”_blank” href="https://github.com/adammmusial/library"><img width="24px" src="./images/github-mark.svg" alt="Github Logo"></a>  2023</p>
+        </div>
 
     </div>
     <script src="index.js"></script>
