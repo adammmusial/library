@@ -16,6 +16,9 @@
     --main-font: 'Poppins',sans-serif;
     --inset-border: inset 0 0 0 0.3em var(--accent-color);
     --transition-speed: 0.5s;
+    --green-gradient: linear-gradient(to right, #e0f2f1, #26a69a);
+    --yellow-gradient: linear-gradient(to right, #fffde7, #ffeb3b); 
+    --grey-gradient: linear-gradient(to right, #eceff1, #607d8b); 
 }
 
 body,
@@ -57,7 +60,7 @@ img {
 }
 
 .footer {
-    grid-row: 3; /* Position footer at the bottom */
+    grid-row: 3;
 }
 
 .header h1 {
@@ -74,14 +77,31 @@ img {
     padding: 10px;
 }
 
-/* CARD GRID */
+/* CARDS */
 
 .card-grid {
     display: grid;
-    justify-content: space-between;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    padding: 10;
 } 
+
+.card-grid div {
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.in-progress {
+    background: var(--yellow-gradient);
+}
+
+.read {
+    background: var(--green-gradient);
+}
+
+.not-read {
+    background: var(--grey-gradient);
+}
 
 /* BUTTON */
 
@@ -102,6 +122,8 @@ img {
     grid-row: 2;
 }
 
+
+/* FORM */
 
 .popup {
     display: none;
@@ -133,6 +155,46 @@ img {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.form-rows {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: repeat(4, 40px);
+    justify-items: left;
+    margin-bottom: 10px;
+}
+
+.form-rows label {
+    grid-column: 1;
+    height: 2vh;
+}
+
+.form-rows input {
+    margin: 0;
+    padding: 0 0 0 0.5em;
+    font-family: var(--main-font);
+    font-size: 1.3em;
+    border-width: 0.10em;
+    border-radius: 0.5em;
+    height: 1em;
+}
+
+.progress {
+    grid-column: 1/3;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.progress label, .progress input {
+    vertical-align: middle; /* Align the text and radio buttons vertically */
+}
+
+/* Additional styling to improve spacing around the labels */
+.progress label {
+    margin-left: 5px;
+    margin-right: 5px; /* Adjust spacing to your preference */
 }
 
 
