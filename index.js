@@ -37,15 +37,23 @@ function displayBooks(){
         }
 
         card.classList.add(statusClass)
-
         card.innerHTML = `
-
-        <h3> Title: ${book.title}</h3>
-        <p>Author: ${book.author}</p>
-        <p>Read: ${book.read}</p>
-        <p>Genre: ${book.genre}</p>
-        <button class="deleteBtn" data-index="${index}">Delete</button>'`
-        ;
+        <div class="card-content">
+            <div class="labels">
+                <p>Title:</p>
+                <p>Author:</p>
+                <p>Read:</p>
+                <p>Genre:</p>
+            </div>
+            <div class="values">
+                <p>${book.title}</p>
+                <p>${book.author}</p>
+                <p>${book.read}</p>
+                <p>${book.genre}</p>
+            </div>
+        </div>
+        <button class="deleteBtn" data-index="${index}">Delete</button>
+    `;
 
         bookGrid.appendChild(card);
     });
