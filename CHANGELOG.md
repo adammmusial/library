@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/adammmusial/library/compare/v1.3.0...v1.4.0) (2024-03-28)
+
+
+### Features
+
+* adjust the code for generating html code for cards ([8ed5496](https://github.com/adammmusial/library/commit/8ed549603670f593691002f47ad0fad4c8790698))
+* apply final styling to button and generated cards ([5644fa4](https://github.com/adammmusial/library/commit/5644fa4176ceb4146d444ec2b56c2e0c7d96cb89))
+* implement card and form styling ([2072c1e](https://github.com/adammmusial/library/commit/2072c1e599f846722483c0602caff7c7c312a507))
+
+
+### Bug Fixes
+
+* change the structure of the html file for form creation ([6dedb25](https://github.com/adammmusial/library/commit/6dedb2549530544719e645ad0e9fc25b895bd1bd))
+
 ## [1.3.0](https://github.com/adammmusial/library/compare/v1.2.0...v1.3.0) (2024-03-28)
 
 
