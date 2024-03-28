@@ -13,40 +13,52 @@
 
         <div class="header">
             <img width="100px" src="./images/logo.svg" alt="Bookshelf Icon">
-            <h1 class="center">My Book Library</h1>            
+            <h1 class="center">My Book Library</h1>
         </div>
-        
+
         <div class="main">
 
             <div class="button">
                 <button id="addBookBtn">Add Book</button>
             </div>
-            <div class="card-grid"></div>
+            <div class="card-grid" id="bookGrid"></div>
             <dialog id="bookDialog">
                 <div class="dialog-content">
-                    <button id="closeDialog">&times;</button>
                     <form id="bookForm">
-                        <label for="title">Title:</label>
-                        <input type="text" id="title" name="title"><br><br>
-                        <label for="author">Author:</label>
-                        <input type="text" id="author" name="author"><br><br>
-                        <label for="genre">Genre:</label>
-                        <input type="text" id="genre" name="genre"><br><br>
-                        <label for="read">Read:</label>
-                        <input type="text" id="read" name="read"><br><br>
-                        <button type="submit">Save</button>
+                        <h2>Add New Book</h2>
+                        <div class="form-rows">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" name="title">
+                            <label for="author">Author</label>
+                            <input type="text" id="author" name="author">
+                            <label for="genre">Genre</label>
+                            <input type="text" id="genre" name="genre">
+                            <div class="progress" id="book-status">
+                                <input type="radio" id="status-read" name="book-status" value="status-read" checked>
+                                <label for="status-read">Read</label>
+                                <input type="radio" id="status-in-progress" name="book-status" value="status-in-progress">
+                                <label for="status-in-progress">In Progress</label>
+                                <input type="radio" id="status-unread" name="book-status" value="status-unread">
+                                <label for="status-unread">Unread</label>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button type="submit">Save</button>
+                            <button id="closeDialog">Close</button>
+                        </div>
                     </form>
                 </div>
             </dialog>
         </div>
 
         <div class="footer">
-            <p>Made by Adam Musial  <a target=”_blank” href="https://github.com/adammmusial/library"><img width="24px" src="./images/github-mark.svg" alt="Github Logo"></a>  2023</p>
+            <p>Made by Adam Musial <a target=”_blank” href="https://github.com/adammmusial/library"><img width="24px"
+                        src="./images/github-mark.svg" alt="Github Logo"></a> 2023</p>
         </div>
 
     </div>
-    <script src="index.js"></script>
 
+    <script src="index.js"></script>
 </body>
 
 </html>
