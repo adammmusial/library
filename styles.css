@@ -19,6 +19,7 @@
     --green-gradient: linear-gradient(to right, #e0f2f1, #26a69a);
     --yellow-gradient: linear-gradient(to right, #fffde7, #ffeb3b); 
     --grey-gradient: linear-gradient(to right, #eceff1, #607d8b); 
+    --radius: 0.5em
 }
 
 body,
@@ -83,12 +84,13 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 10;
+    padding: 10px;
+    margin-top: 30px;
+
 } 
 
 .card-grid div {
-    border-radius: 10px;
-    margin-top: 30px;
+    border-radius: var(--radius);;
 }
 
 .in-progress {
@@ -103,13 +105,47 @@ img {
     background: var(--grey-gradient);
 }
 
+.card {
+    border: 1px solid #ddd;
+    margin: 0px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-content {
+    display: grid;
+    grid-template-columns: auto auto; 
+    column-gap: 20px; 
+    align-items: center; 
+}
+
+.labels p, .values p, .values h3 {
+    margin: 0; 
+    padding: 4px 0; 
+}
+
+.labels p {
+    font-weight: bold;
+}
+
+.deleteBtn {
+    margin-top: 10px;
+    width: 30%;
+    border: 0.1em solid var(--dark-color);
+    font-family: var(--main-font);
+    background: var(--background);
+    border-radius: var(--radius);
+}
+
+
+
 /* BUTTON */
 
 #addBookBtn {
     border: none;
     padding: 10px;
     color: var(--dark-color);
-    border-radius: 10px;
+    border-radius: var(--radius);
     font-size: 1em;
     background: rgba(0, 0, 0,0.15);
     outline: none;
@@ -124,6 +160,7 @@ img {
 
 
 /* FORM */
+
 
 .popup {
     display: none;
@@ -162,44 +199,43 @@ img {
     grid-template-columns: 80px 1fr;
     grid-template-rows: repeat(4, 40px);
     justify-items: left;
-    margin-bottom: 10px;
+    margin: 20px;
 }
 
-.form-rows label {
-    grid-column: 1;
-    height: 2vh;
-}
 
 .form-rows input {
-    margin: 0;
-    padding: 0 0 0 0.5em;
     font-family: var(--main-font);
-    font-size: 1.3em;
-    border-width: 0.10em;
-    border-radius: 0.5em;
-    height: 1em;
+    border-width: 0.08em;
+    border-radius: var(--radius);
+    height: 1.5em;
+    width: 90%;
 }
 
 .progress {
+    display: flex;
     grid-column: 1/3;
     justify-content: center;
     align-items: center;
+    font-size: 0.8em;
     width: 100%;
 }
 
 .progress label, .progress input {
-    vertical-align: middle; /* Align the text and radio buttons vertically */
+    vertical-align: middle; 
 }
 
-/* Additional styling to improve spacing around the labels */
 .progress label {
     margin-left: 5px;
-    margin-right: 5px; /* Adjust spacing to your preference */
+    margin-right: 5px; 
 }
 
+form button {
+    width: 30%;
+    border: 0.1em solid var(--dark-color);
+    font-family: var(--main-font);
+    background: var(--background);
+    border-radius: var(--radius);
+    padding: 0.5em 1em;
+    margin: 0 1em 1em 0;
+} 
 
-.card {
-    border: 1px solid #ddd;
-    padding: 10px;
-    box-sizing: border-box;
-}
