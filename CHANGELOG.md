@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/adammmusial/library/compare/v1.2.0...v1.3.0) (2024-03-28)
+
+
+### Features
+
+* apply structure changes to html file ([876b993](https://github.com/adammmusial/library/commit/876b9933855fe63ba91a252f52cd03bc8f8c0387))
+* clean css chaos and fix positioning ([5fbd1ad](https://github.com/adammmusial/library/commit/5fbd1ad8454dbca58c713ad0919911819d6a183f))
+* implement dialog tag to allow adding books ([afe6db8](https://github.com/adammmusial/library/commit/afe6db8293d040ea59bef3efc1c452abccf8d8a2))
+* implement function to delete given card ([cac9167](https://github.com/adammmusial/library/commit/cac91679325e1930b741885afee95527268d4f98))
+* implement root ([fad1219](https://github.com/adammmusial/library/commit/fad12196db487d26866e5040974afdb8ab9b3ba3))
+
 ## [1.2.0](https://github.com/adammmusial/library/compare/v1.1.0...v1.2.0) (2024-03-25)
 
 
