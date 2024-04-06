@@ -1,75 +1,81 @@
-const myLibrary = [];
+class Book {
+    constructor(title,author,genre,read){
 
-function Book(title,author,genre,read) {
-  this.title = title;
-  this.author = author;
-  this.genre = genre;
-  this.read = read;
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.read = read;
+    }
 }
 
+class Library {
 
-function addBookToLibrary(title,author,genre,read) {
+    constructor(){
+        this.books=[]
+    }
 
-    const newBook = new Book(title,author,genre,read) 
-    myLibrary.push(newBook)
+    addBook(book){
+        this.books.push(book)
+    }
+
+    delete(index){
+        this.books.splice(index, 1)
+    }
+
+    getBooks() {
+        return this.books;
+    }
 }
 
-function displayBooks(){
-    const bookGrid = document.getElementById('bookGrid')
-    bookGrid.innerHTML = "";
+class UI {
+    static displayBooks(books) {
+        const bookGrid = document.getElementById('bookGrid');
+        bookGrid.innerHTML = '';
 
-    myLibrary.forEach((book, index) => {
+        books.forEach((book, index) => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            let statusClass = book.read.replace(/\s+/g, '-').toLowerCase();
+            card.classList.add(statusClass);
 
-        const card = document.createElement('div')
-        card.classList.add('card')
-        let statusClass = ''
-
-        switch (book.read.toLowerCase()) {
-            case 'read':
-                statusClass = 'read';
-                break;
-            case 'in progress':
-                statusClass = 'in-progress';
-                break;
-            case 'unread':
-                statusClass = 'not-read';
-                break;
-        }
-
-        card.classList.add(statusClass)
-        card.innerHTML = `
-        <div class="card-content">
-            <div class="labels">
-                <p>Title:</p>
-                <p>Author:</p>
-                <p>Read:</p>
-                <p>Genre:</p>
+            card.innerHTML = `
+            <div class="card-content">
+                <div class="labels">
+                    <p>Title:</p>
+                    <p>Author:</p>
+                    <p>Read:</p>
+                    <p>Genre:</p>
+                </div>
+                <div class="values">
+                    <p>${book.title}</p>
+                    <p>${book.author}</p>
+                    <p>${book.read}</p>
+                    <p>${book.genre}</p>
+                </div>
             </div>
-            <div class="values">
-                <p>${book.title}</p>
-                <p>${book.author}</p>
-                <p>${book.read}</p>
-                <p>${book.genre}</p>
-            </div>
-        </div>
-        <button class="deleteBtn" data-index="${index}">Delete</button>
-    `;
+            <button class="deleteBtn" data-index="${index}">Delete</button>
+            `;
 
-        bookGrid.appendChild(card);
-    });
+            bookGrid.appendChild(card);
+        });
 
-    deleteCard()
+        UI.deleteBookEvent(library);
+    }
+
+    static deleteBookEvent(library) {
+        document.querySelectorAll('.deleteBtn').forEach(button => {
+            button.addEventListener('click', function() {
+                const bookIndex = this.getAttribute('data-index');
+                library.delete(bookIndex);
+                UI.displayBooks(library.getBooks());
+            });
+        });
+    }
 }
 
-function deleteCard() {
-    document.querySelectorAll('.deleteBtn').forEach(button => {
-        button.addEventListener('click', function() {
-            const bookIndex = this.getAttribute('data-index');
-            myLibrary.splice(bookIndex,1);
-            displayBooks();
-        })
-    })
-}
+const library = new Library();
+
+document.addEventListener('DOMContentLoaded',() => UI.displayBooks(library.getBooks()));
 
 document.getElementById('addBookBtn').addEventListener('click', function () {
     document.getElementById('bookDialog').showModal();
@@ -108,17 +114,11 @@ document.getElementById('bookForm').addEventListener('submit', function(event) {
             break;
     }
 
-    addBookToLibrary(title,author,genre,readStatus);
-    displayBooks()
+    const book = new Book(title,author,genre,readStatus);
+    library.addBook(book)
+    UI.displayBooks(library.getBooks())
     document.getElementById('bookDialog').close()
     document.getElementById('bookForm').reset()
 
 })
 
-document.addEventListener('DOMContentLoaded',displayBooks)
-
-
-function getRandomColor() {
-    const getRandom = () => Math.floor(Math.random() * 256);
-    return `rgb(${getRandom()}, ${getRandom()}, ${getRandom()})`;
-  }
