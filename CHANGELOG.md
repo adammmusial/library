@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/adammmusial/library/compare/v1.4.0...v1.5.0) (2024-04-06)
+
+
+### Features
+
+* implement classes and make code modular ([753c184](https://github.com/adammmusial/library/commit/753c184431518b49286f39bccba47d734897b990))
+
 ## [1.4.0](https://github.com/adammmusial/library/compare/v1.3.0...v1.4.0) (2024-03-28)
 
 
