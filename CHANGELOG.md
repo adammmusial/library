@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://github.com/adammmusial/library/compare/v1.5.0...v1.5.1) (2024-05-15)
+
+
+### Bug Fixes
+
+* change html document name ([3479361](https://github.com/adammmusial/library/commit/3479361fb4af6c005d4e1f3b3953922de0436189))
+
 ## [1.5.0](https://github.com/adammmusial/library/compare/v1.4.0...v1.5.0) (2024-04-06)
 
 
