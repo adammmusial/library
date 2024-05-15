@@ -6,7 +6,7 @@
 I created a book library application using HTML, CSS, and JavaScript. This app allows users to manage their personal book collection by adding new books, viewing the book list, and deleting books. Users can also mark books as read, unread, or in progress. The UI includes a modal dialog for adding new books and a responsive grid layout for displaying the book collection. This project helped me understand how to manage user inputs, handle DOM manipulation, and style a responsive web app.
 
 
-<img width="814" alt="Screenshot 2024-05-15 at 17 20 06" src="https://github.com/adammmusial/library/assets/95377932/3d8ddf78-72d6-40d1-b605-b233922a686b">
+<img width="350" alt="Screenshot 2024-05-15 at 17 20 06" src="https://github.com/adammmusial/library/assets/95377932/3d8ddf78-72d6-40d1-b605-b233922a686b">
 
 ## Key learnings:
 - Creating and managing a modal dialog for user input
