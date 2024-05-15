@@ -1,5 +1,5 @@
 # My Book Library
-<a href="ttps://library-am.netlify.app/">Live Demo </a>
+<a href="https://library-am.netlify.app/">Live Demo </a>
 
 ## About the Project
 I created a simple book library application using HTML, CSS, and JavaScript. This app allows users to manage their personal book collection by adding new books, viewing the book list, and deleting books. Users can also mark books as read, unread, or in progress. The UI includes a modal dialog for adding new books and a responsive grid layout for displaying the book collection. This project helped me understand how to manage user inputs, handle DOM manipulation, and style a responsive web app.
@@ -19,4 +19,3 @@ I created a simple book library application using HTML, CSS, and JavaScript. Thi
 ## Resources Used
 - **Google Fonts**: For including the 'Poppins' font in the project.
 - **Devicon**: For technology icons used in the documentation.
-- **Online tutorials**: Various online resources for learning about DOM manipulation and responsive design.
