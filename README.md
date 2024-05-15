@@ -12,9 +12,7 @@ I created a simple book library application using HTML, CSS, and JavaScript. Thi
 - Managing form submissions and validating user input
 
 ## Technologies Used
-<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original-wordmark.svg" width="50"> 
-<img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original-wordmark.svg" width="50"> 
-<img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" width="50">
+<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original-wordmark.svg" width="50"> <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original-wordmark.svg" width="50"> <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" width="40">
 
 ## Resources Used
 - **Google Fonts**: For including the 'Poppins' font in the project.
